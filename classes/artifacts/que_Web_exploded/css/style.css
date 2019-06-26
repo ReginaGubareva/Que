@@ -1,0 +1,40 @@
+h1.display-4{
+   color: #28aaa1;
+   text-align: center;
+}
+
+h5.header, th{
+    color: #28aaa1;
+}
+
+h5,td{
+    color: #096967;
+}
+
+p{
+   color: rgb(72, 201, 180);
+   text-align: center;
+}
+.centred{
+    margin: 30px 60px;
+}
+
+.card-body h5 label .breadcrumb{
+    color: #28aaa1;
+}
+
+.greeting{
+    align-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
