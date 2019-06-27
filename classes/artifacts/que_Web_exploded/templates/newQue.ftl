@@ -2,14 +2,13 @@
 
 <@c.page>
 
-    <div class="container mx-auto justify-align-center">
     <form action="/newQue" method="post" >
 
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
         <div>
-            <input type="text" id="queName" name="queName" class="form-control col-6 mb-3" placeholder="Enter name of que">
-            <input type="text" id="queDescription" name="queDescription" class="form-control col-6 mb-3" placeholder="Enter description">
+            <input type="text" id="queName" name="queName" class="form-control mb-3" placeholder="Enter name of que" style="width: 50rem;">
+            <input type="text" id="queDescription" name="queDescription" class="form-control mb-3" placeholder="Enter description" style="width: 50rem;">
         </div>
 
         <div id="buttonBar" class="btn-group" role="group">
@@ -19,11 +18,10 @@
 
         <div class="questions mb-3" id="questions"></div>
 
-        <div class="d-flex justify-content-center">
+        <div style="margin-left: 350px;">
             <button type ="submit" class="btn btn-outline-info mb-3" id="send">Create</button>
         </div>
     </form>
-    </div>
 
     <script type="text/javascript">
 

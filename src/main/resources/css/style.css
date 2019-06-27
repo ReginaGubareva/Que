@@ -8,7 +8,11 @@ h5.header, th{
     color: #28aaa1;
 }
 
-h5,td{
+h5, td{
+    color: #096967;
+}
+
+.nav-link{
     color: #096967;
 }
 
@@ -17,7 +21,7 @@ h6.display-4.font-weight-normal.mx-auto{
 }
 
 p{
-   color: rgb(72, 201, 180);
+    color: #28aaa1;
 }
 
 .centred{
@@ -60,7 +64,21 @@ p{
     display: inline-block;
 }
 
+#queName, #queDescription,
+select#queName#queDescription {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #1BA0B6;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}
 
+#queName, #queDescription:focus,
+select#queName#queDescription:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
 
 
