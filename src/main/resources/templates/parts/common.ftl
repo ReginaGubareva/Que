@@ -1,5 +1,4 @@
 <#macro page>
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
