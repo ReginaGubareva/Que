@@ -80,7 +80,6 @@ $(document).ready(function(){
         data[$('#queName').val()] = [ $('#queDescription').val() ] ;
 
         let questionCounts = document.getElementById('questions').childElementCount;
-        alert("Questions count: " + questionCounts);
 
         for(let j = 0; j<questionCounts; j++){
 

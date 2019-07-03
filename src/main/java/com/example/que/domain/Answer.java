@@ -1,6 +1,9 @@
 package com.example.que.domain;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "answer")
@@ -9,6 +12,8 @@ public class Answer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotBlank(message = "Please fill the answer")
+    @Length(max = 2048, message = "Too long(more than 2kB)")
     private String answer;
 
     @ManyToOne(cascade = CascadeType.ALL)

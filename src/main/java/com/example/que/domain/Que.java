@@ -1,6 +1,9 @@
 package com.example.que.domain;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -14,8 +17,12 @@ public class Que {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotBlank(message = "Please fill the name of your Que")
+    @Length(max = 2048, message = "Too long(more than 2kB)")
     private String queName;
 
+    @NotBlank(message = "Please fill the Que desription")
+    @Length(max = 2048, message = "Too long(more than 2kB)")
     private String queDescription;
 
     @OneToMany(mappedBy = "que", cascade = CascadeType.ALL)

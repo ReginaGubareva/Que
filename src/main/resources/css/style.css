@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran|Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 
 h1.display-4{
    color: #28aaa1;
@@ -55,6 +56,12 @@ p{
     text-align:center;
 }
 
+#loginForm{
+    margin-top: 100px;
+}
+
+
+
 .custom-control-label{
     color: #096967;
     font-family: 'Didact Gothic', 'Catamaran', sans-serif;
@@ -62,6 +69,12 @@ p{
 
 .custom-control .custom-checkbox {
     display: inline-block;
+}
+
+.create_account{
+    color: #28aaa1;
+    font-size: medium;
+    font-family: 'Archivo Black', sans-serif;
 }
 
 #queName, #queDescription,

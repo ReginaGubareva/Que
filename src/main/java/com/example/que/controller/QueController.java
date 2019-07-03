@@ -43,7 +43,7 @@ public class QueController {
 
         if(!data.contains("_csrf")){
             json = data;
-            System.out.println("Json: " + json);
+            //System.out.println("Json: " + json);
 
             String[] arrByQuestion = json.split("],");
             List<String> list = new ArrayList<>();
@@ -80,7 +80,7 @@ public class QueController {
                 queRepo.save(newQue);
             }
         }
-        return "newQue";
+        return "redirect:/main";
     }
 }
 

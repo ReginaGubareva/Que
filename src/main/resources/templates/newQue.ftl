@@ -7,7 +7,7 @@
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
         <div>
-            <input type="text" id="queName" name="queName" class="form-control mb-3" placeholder="Enter name of que" style="width: 50rem;">
+            <input type="text" id="queName" name="queName" class="form-control mb-4" placeholder="Enter name of que" style="width: 50rem;">
             <input type="text" id="queDescription" name="queDescription" class="form-control mb-3" placeholder="Enter description" style="width: 50rem;">
         </div>
 
