@@ -5,9 +5,9 @@
     <div class="container mx-auto justify-align-center">
     <form action="/main" method="get" enctype="multipart/form-data" class="form-inline mb-3">
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
-        <input type="text" class="form-control col-8" id="exampleFormControlInput1" placeholder="Enter name of que">
+        <input type="text" class="form-control col-8" name="filter" value="${filter!}" placeholder="Enter name of que">
         <button class="btn btn-outline-info ml-2" type="submit">Search</button>
-        <a href="/newQue" class="btn btn-outline-info ml-2" role="button" >New Que</a>
+        <a href="/newQue" class="btn btn-outline-info ml-2" role="button">New Que</a>
     </form>
 
     <ul class="list-group col-8">

@@ -60,7 +60,16 @@ p{
     margin-top: 100px;
 }
 
+h3 strong{
+    font-family: 'Didact Gothic', 'Catamaran', sans-serif;
+    color: #096967;
+}
 
+h5 strong{
+    font-family: 'Didact Gothic', 'Catamaran', sans-serif;
+    color: #28aaa1;
+    font-size: medium;
+}
 
 .custom-control-label{
     color: #096967;

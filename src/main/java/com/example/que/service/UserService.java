@@ -4,6 +4,7 @@ import com.example.que.domain.Role;
 import com.example.que.domain.User;
 import com.example.que.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -24,6 +25,9 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private MailSender mailSender;
+
+    @Value("${hostname}")
+    private String hostname;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -58,8 +62,9 @@ public class UserService implements UserDetailsService {
             String message = String.format(
                     "Hello, %s. \n" +
                             "Welcome to Que. Please, check this link for confirm: \n"+
-                            "http://localhost:8080/activate/%s",
+                            "http://%s/activate/%s",
                     user.getUsername(),
+                    hostname,
                     user.getActivationCode()
             );
 
