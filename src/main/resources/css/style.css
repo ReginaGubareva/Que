@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran|Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 
-h1.display-4{
+h1.display-1{
    color: #28aaa1;
 }
 
@@ -13,7 +13,7 @@ h5, td{
     color: #096967;
 }
 
-.nav-link{
+#navlink{
     color: #096967;
 }
 
@@ -31,6 +31,12 @@ p{
 
 .card-body h5 label .breadcrumb{
     color: #28aaa1;
+}
+
+#queCard{
+    color: #096967;
+    font-family: 'Didact Gothic', 'Catamaran', sans-serif;
+    font-size: medium;
 }
 
 .lead{
