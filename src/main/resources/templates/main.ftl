@@ -1,33 +1,25 @@
 <#import "parts/common.ftl" as c>
 
-
 <@c.page>
 
+    <div class="row justify-content-center">
+        <form action="/main" method="get" enctype="multipart/form-data" class="form-inline mb-3">
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
 
-                <form action="/main" method="get" enctype="multipart/form-data" class="form-inline  mb-3">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                <div id="findQue" class="input-group">
+                    <input type="text" class="form-control col-12 col-sm-8" name="filter" value="${filter!}" placeholder="Enter name of que">
+                    <div class="input-group-append">
+                        <button class="btn btn-info" type="submit">Find</button>
+                    </div>
+            </div>
+        </form>
+    </div>
 
 
-                            <div class="row">
-                                
-                                    <div class="col-12 col-sm-8 input-group">
-                                <input type="text" class="form-control" name="filter" value="${filter!}" placeholder="Enter name of que">
-                                <div class="input-group-append">
-                                    <button class="btn btn-info" type="submit">Find</button>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                </form>
-
-
-
-                <div class="container-fluid">
-
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-sm-8">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8">
                 <ul class="list-group">
                     <#list ques as que>
                         <div class="card mb-2">
