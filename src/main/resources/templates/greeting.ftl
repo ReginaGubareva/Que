@@ -2,15 +2,21 @@
 
 <@c.page>
     <div class="greeting">
-        <div class="container-fluid mx-auto my-5">
-            <h1 class="display-1">Hello</h1>
-            <p class="lead">This is a simple unit for creating and solving questionaries.</p>
+        <div class="container-fluid mx-auto">
+
+            <img class="kit" src="/static/kit.png" alt="">
+            <h1 class="display-4">Hello</h1>
+            <p class="lead">My name is Que. I am a Kit. I will help you to create questionaries. </p>
             <hr class="col-10 my-4">
             <p>It uses GoogleForm as example.</p>
             <div class="d-flex justify-content-center"><a href="/main" id="startButton"
                                                           class="btn btn-info"
                                                           role="button">Start use Que</a></div>
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+            </nav>
         </div>
     </div>
+
 </@c.page>
 

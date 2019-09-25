@@ -73,30 +73,30 @@ $(document).ready(function(){
         i++;
     });
 
-    $("#send").click(function () {
-
-
+    $("#create").click(function () {
         var data = {};
-        data[$('#queName').val()] = [ $('#queDescription').val() ] ;
+        data[$('#queName').val()] = [$('#queDescription').val()];
 
         let questionCounts = document.getElementById('questions').childElementCount;
 
-        for(let j = 0; j<questionCounts; j++){
+        for (let j = 0; j < questionCounts; j++) {
 
             let answerList = [];
             let questionName = document.getElementById("question" + j).value.toString();
 
-            var answers = document.getElementById("questionNavBar"+j).querySelectorAll('#answer');
+            var answers = document.getElementById("questionNavBar" + j).querySelectorAll('#answer');
 
-            if(answers.length > 1) {
-                for(let k = 0; k < answers.length; k++){
+            if (answers.length > 1) {
+                for (let k = 0; k < answers.length; k++) {
                     answerList.push(answers[k].value);
                 }
             } else {
-                answerList.push("text");
+                if (answers[0] !== '') {
+                    answerList.push("text");
+                }
             }
-
             data[questionName] = answerList;
+
         }
 
         $.ajax({

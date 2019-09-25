@@ -4,15 +4,15 @@
 
 <@c.page>
 
-    <div class="jumbotron mx-auto"  style="width: 50rem">
+    <div class="jumbotron mx-auto"  style="width: 50rem; height: 15rem;">
         <p class="ml-5">
-            <h1 class="display-4 text-left">${que.getQueName()}</h1>
-            <div class="lead mt-3">${que.getQueDescription()}</div>
-            <p id="countsOfQuestions">Size: ${que.getQuestionsCount()}</p>
-        </div>
+        <h1 class="display-4 text-left">${que.getQueName()}</h1>
+        <div class="lead mt-3">${que.getQueDescription()}</div>
+        <p id="countsOfQuestions">Size: ${que.getQuestionsCount()}</p>
     </div>
 
-    <form method="post" action="/answerQue/${que.getId()}/${userId}" >
+    <form id="answerQue" method="post" action="/answerQue/${que.getId()}/${userId}" >
+<#--    <form method="get" action="/answerQue/${que.getId()}" >-->
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 
         <#assign count = 1>
@@ -45,26 +45,11 @@
         </#list>
 
         <div class="d-flex justify-content-center">
-            <button type ="submit" class="btn btn-outline-info btn-lg mb-3" id="send">Send</button>
+            <button type ="submit" class="btn btn-outline-info btn-lg mb-3" id="valid">Answer</button>
         </div>
 
     </form>
 
-
-    <script type="text/javascript">
-
-        $('input.custom-control-input').click(function() {
-            if (!$(this).prop('checked'))
-            {
-                return;
-            }
-            var group = $(this).data('group');
-            if (group)
-            {
-                $('input[data-group="' + group + '"]:checked').prop('checked', false);
-                $(this).prop('checked', true);
-            }
-        });
-    </script>
+    <script type="text/javascript" src="/js/answerQue.js"></script>
 </@c.page>
 

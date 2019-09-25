@@ -19,7 +19,7 @@
         <div class="questions mb-3" id="questions"></div>
 
         <div style="margin-left: 350px;">
-            <button type ="submit" class="btn btn-outline-info mb-3" id="send">Create</button>
+            <button type ="submit" class="btn btn-outline-info mb-3" id="create">Create</button>
         </div>
     </form>
 

@@ -25,22 +25,30 @@ p{
     color: #28aaa1;
 }
 
-.centred{
-    margin: 30px 60px;
-}
+/*.centred{*/
+/*    margin: 30px 60px;*/
+/*}*/
 
 .card-body h5 label .breadcrumb{
     color: #28aaa1;
 }
 
-/*#findQue{*/
-/*    width: 720px;*/
-/*}*/
+h1.display-4 p.lead{
+    color: #28aaa1;
+}
 
 #queCard{
-    color: #096967;
+    color: #f8f9fa;
+    background: #f8f9fa;
+    -webkit-box-shadow: -5px 7px 9px -6px rgba(184,184,184,1);
+    -moz-box-shadow: -5px 7px 9px -6px rgba(184,184,184,1);
+    box-shadow: -5px 7px 9px -6px rgba(184,184,184,1);
+}
+
+#queInfo{
     font-family: 'Didact Gothic', 'Catamaran', sans-serif;
-    font-size: medium;
+    color: #096967;
+    font-size: x-large;
 }
 
 .lead{
@@ -96,6 +104,23 @@ h5 strong{
     font-family: 'Archivo Black', sans-serif;
 }
 
+.form-control:focus {
+    box-shadow: none;
+}
+
+ .main {
+    background: rgba(40, 170, 161, 0.69);
+    background: -webkit-linear-gradient(to right, rgba(0, 0, 0, 0.53), rgba(9, 105, 103, 0.69));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.53), rgba(9, 105, 103, 0.69));
+    min-height: 100vh;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
 #queName, #queDescription,
 select#queName#queDescription {
     background: transparent;
@@ -112,9 +137,18 @@ select#queName#queDescription:focus {
     box-shadow: none;
 }
 
+#greetingp{
+    padding-top: 40px;
+    font-size: 15px;
+    font-style: oblique;
+    font-weight:100;
+}
 
 
-
+.kit{
+    width: 200px;
+    height: 200px;
+}
 
 
 

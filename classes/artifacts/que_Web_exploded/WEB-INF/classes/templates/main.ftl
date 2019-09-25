@@ -2,29 +2,50 @@
 
 
 <@c.page>
-    <div class="container mx-auto justify-align-center">
-    <form action="/main" method="get" enctype="multipart/form-data" class="form-inline mb-3">
-        <input type="hidden" name="_csrf" value="${_csrf.token}" />
-        <div class="row">
-            <input type="text" class="form-control ml-2 col col-md-8" name="filter" value="${filter!}" placeholder="Enter name of que">
-            <button class="btn btn-info ml-2 mt-2 col" type="submit">Search</button>
-            <a href="/newQue" class="btn btn-info mt-2 ml-2 col" role="button">New Que</a>
-        </div>
-    </form>
-
-    <ul class="list-group col-8">
-        <#list ques as que>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="/answerQue/${que.getId()}" methods="get">
-                    <h5>${que.getQueName()}</h5><i style="color: cadetblue">${que.getQueDescription()}</i>
-                </a>
-
-                <div>
-                    <a class="badge badge-info ml-1" href="/statisticQue/${que.getId()}" methods="get">Dashboard</a>
-                    <span class="badge badge-info badge-pill">${que.getQuestionsCount()}</span>
+    <div>
+        <form action="/main" method="get" enctype="multipart/form-data">
+            <div class="row justify-content-center">
+            <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4 col-12 col-sm-8">
+                <div class="input-group">
+                    <input type="search" name="filter" value="${filter!}" placeholder="Find your que" class="form-control border-0 bg-light">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Найди нужную анкету">Find</button>
+                    </div>
                 </div>
-            </li>
-        </#list>
-    </ul>
+            </div>
+            </div>
+        </form>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8">
+                <ul class="list-group">
+                    <#list ques as que>
+
+                                <div class="card">
+                                <a id="queCard" class="mt-1 mb-1"  href="/answerQue/${que.getId()}" methods="get">
+                                    <strong>${que.getQueName()}</strong>
+                                    <br>
+                                    <i>${que.getQueDescription()}</i>
+                                </a>
+
+                                <div>
+                                    <a class="badge badge-info ml-1" href="/statisticQue/${que.getId()}" methods="get">Dashboard</a>
+                                    <span class="badge badge-info badge-pill">${que.getQuestionsCount()}</span>
+                                </div>
+                                </div>
+
+<#--                        <li class="list-group-item d-flex justify-content-between">-->
+<#--                            </li>-->
+
+                    </#list>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    </div>
+
 </@c.page>
+
+

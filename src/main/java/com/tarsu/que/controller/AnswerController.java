@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller("/replyTo")
@@ -31,17 +32,18 @@ public class AnswerController {
         return "answerQue";
     }
 
-    @PostMapping("/answerQue/{queId}/{userId}")
+
+   @PostMapping("/answerQue/{queId}/{userId}")
     public String answerQue(@PathVariable String queId,
                             @PathVariable String userId,
                             @RequestParam("questionId") String[] questionId,
                             @RequestParam("answer") String[] answer){
-        /*System.out.println("Que id: " + queId);
+        System.out.println("Que id: " + queId);
         System.out.println("User id: " + userId);
         Arrays.stream(questionId).forEach(x->System.out.print(x + " "));
         System.out.println();
         Arrays.stream(answer).forEach(x->System.out.print(x + " "));
-        System.out.println();*/
+        System.out.println();
 
         Result result = new Result();
 
