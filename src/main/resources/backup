@@ -1,0 +1,35 @@
+$("#valid").click(function () {
+
+      let isValid = true;
+        alert("bla bla bla");
+
+        let textareas = document.querySelectorAll('textarea[name="answer"]');
+        for(let i = 0; i < textareas.length; i++){
+            if(textareas[i].value.toString() === ''){
+               // alert("please fill all textarea fields");
+                isValid = false;
+            }
+        }
+        let count = 0;
+        let questions = document.querySelectorAll("#question");
+        alert(questions.length.toString());
+
+        for (let i = 0; i < questions.length; i++) {
+
+            if($(questions[i]).find('#checkbox').length !== 0){
+                var checked = questions[i].querySelectorAll("input:checked").length > 0;
+                if (!checked) {
+                    //alert("Please check at least one checkbox");
+                    isValid = false;
+                }
+                count++;
+            }
+        }
+        //alert("input: "  + count.toString());
+
+        if(isValid){
+            $("#answerQue").submit();
+        } else {
+            alert("Please fill all fields!");
+        }
+    });
