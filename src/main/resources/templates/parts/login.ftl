@@ -2,7 +2,7 @@
 
 <#macro login path isRegisterForm>
 
-    <div class="card mx-auto text-center " style="width: 30rem">
+    <div id="loginCard" class="card mx-auto text-center " style="width: 30rem">
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">

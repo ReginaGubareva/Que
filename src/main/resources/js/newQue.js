@@ -108,4 +108,9 @@ $(document).ready(function(){
             dataType: 'json'
         });
     });
+
+    $("#prompt").popover({
+        trigger: 'focus'
+    });
+
 });

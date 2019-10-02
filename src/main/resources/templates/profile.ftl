@@ -30,4 +30,6 @@
 
         <button class="btn btn-primary" type="submit">Save</button>
     </form>
+
+    <script src="../js/hideBottomNavbar.js"></script>
 </@c.page>

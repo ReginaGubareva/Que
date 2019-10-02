@@ -30,10 +30,31 @@
 
     <#include "navbar.ftl">
     <main role="main" class="container mx-auto justify-align-center inner cover">
-        <div class="my-5 mx-auto">
+        <div class="pageBody my-5 mx-auto">
             <#nested>
         </div>
     </main>
     </body>
     </html>
+
+    <nav id="bottomNavbar" class="navbar fixed-bottom d-flex justify-content-around">
+        <div class=" d-flex justify-content-around">
+            <img class="mt-2" style="width: 60px; height: 60px;" src="../../images/kit.png">
+            <div class="developedBy ml-4 mt-3">
+                <p>© Developed by Gubareva R. Designed by Gubarev A. Logo of Yelikova K.
+                    <br>
+                    <a href="http://tarsu.kz/en/" style="color:#1BA0B6">TarSU 2019</a>
+                </p>
+            </div>
+        </div>
+        <div class="contacts">
+            <p><strong>Contacts:</strong><br>
+                rengubareva@gmail.com
+                <br>
+                artem.gbrev@gmail.com
+                <br>
+                ksyusha1404@gmail.com</p>
+        </div>
+
+    </nav>
 </#macro>

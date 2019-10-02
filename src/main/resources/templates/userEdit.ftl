@@ -25,4 +25,6 @@
             <button class="btn btn-info mt-3" type="submit">Save</button>
         </div>
     </form>
+
+    <script src="../js/hideBottomNavbar.js"></script>
 </@c.page>

@@ -1,8 +1,21 @@
 $(document).ready(function () {
 
-  $("#valid").click(function () {
+    $("#valid").click(function () {
+        if(!isValid()){
+            alert("Please fill all fields!");
+            $("#answerQue").submit(function(e){
+                e.preventDefault();
+            });
+        }else{
+            // $("#answerQue").submit(function (e) {
+            //     e.submit();
+            // });
+            document.getElementById("answerQue").submit();
+        }
+    });
 
-      let isValid = true;
+    function isValid() {
+        let isValid = true;
 
         let textareas = document.querySelectorAll('textarea[name="answer"]');
         for(let i = 0; i < textareas.length; i++){
@@ -16,14 +29,40 @@ $(document).ready(function () {
         for (let i = 0; i < questions.length; i++) {
 
             if($(questions[i]).find('#checkbox').length !== 0){
-                var checked = questions[i].querySelectorAll("input:checked").length > 0;
+                let checked = questions[i].querySelectorAll("input:checked").length > 0;
                 if (!checked) {
                     isValid = false;
                 }
             }
         }
 
-        if(!isValid){
+        return isValid;
+    }
+
+
+    /*jQuery.fn.isValid = function(){
+        let isValid = true;
+
+        let textareas = document.querySelectorAll('textarea[name="answer"]');
+        for(let i = 0; i < textareas.length; i++){
+            if(textareas[i].value.toString() === ''){
+                isValid = false;
+            }
+        }
+
+        let questions = document.querySelectorAll("#question");
+
+        for (let i = 0; i < questions.length; i++) {
+
+            if($(questions[i]).find('#checkbox').length !== 0){
+                let checked = questions[i].querySelectorAll("input:checked").length > 0;
+                if (!checked) {
+                    isValid = false;
+                }
+            }
+        }
+
+        if(!isValid()){
             alert("Please fill all fields!");
             $("#answerQue").submit(function(e){
                 e.preventDefault();
@@ -31,45 +70,7 @@ $(document).ready(function () {
         } else {
             $("#answerQue").submit();
         }
-    });
-
-
-    /*if(!$.isValid()){
-        alert("please fill all fields");
-    } else {
-        $("#valid").click(function () {
-            alert("bla bla bla");
-        });
-    }
-
-
-   $.isValid = function(){
-        let valid = true;
-
-        let textareas = document.querySelectorAll('textarea[name="answer"]');
-        for(let i = 0; i < textareas.length; i++){
-            if(textareas[i].value.toString() === ''){
-                //alert("please fill all textarea fields");
-                valid = false;
-            }
-        }
-        let count = 0;
-        let questions = document.querySelectorAll("#question");
-        alert(questions.length.toString());
-
-        for (let i = 0; i < questions.length; i++) {
-
-            if($(questions[i]).find('#checkbox').length !== 0){
-                var checked = questions[i].querySelectorAll("input:checked").length > 0;
-                if (!checked) {
-                    //alert("Please check at least one checkbox");
-                    valid = false;
-                }
-                count++;
-            }
-        }
-       // alert("input: "  + count.toString());
-        return valid;
+        // return isValid;
     };*/
 
     $('input.custom-control-input').click(function() {
@@ -83,3 +84,5 @@ $(document).ready(function () {
         }
     });
 });
+
+

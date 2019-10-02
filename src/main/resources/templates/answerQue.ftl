@@ -11,8 +11,7 @@
         <p id="countsOfQuestions">Size: ${que.getQuestionsCount()}</p>
     </div>
 
-    <form id="answerQue" method="post" action="/answerQue/${que.getId()}/${userId}" >
-<#--    <form method="get" action="/answerQue/${que.getId()}" >-->
+    <form class="mb-5" id="answerQue" method="post" action="/answerQue/${que.getId()}/${userId}" >
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 
         <#assign count = 1>
@@ -45,11 +44,11 @@
         </#list>
 
         <div class="d-flex justify-content-center">
-            <button type ="submit" class="btn btn-outline-info btn-lg mb-3" id="valid">Answer</button>
+            <button type ="submit"  class="btn btn-outline-info btn-lg mb-3" id="valid">Answer</button>
         </div>
-
     </form>
 
     <script type="text/javascript" src="/js/answerQue.js"></script>
+    <script src="../js/hideBottomNavbar.js"></script>
 </@c.page>
 

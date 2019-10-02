@@ -31,7 +31,8 @@
                             </a>
 
                             <div class="d-flex align-items-center pr-3">
-                                <a class="badge badge-info badge-pill mr-2" href="/statisticQue/${que.getId()}" methods="get" data-toggle="tooltip" title="view statistics">
+                                <a class="badge badge-info badge-pill mr-2" href="/statisticQue/${que.getId()}" methods="get"
+                                   data-toggle="tooltip" title="Here you can see statics for the Que. Statistic shows first 6 the most popular answers.">
                                     Dashboard
                                 </a>
                                 <span class="badge badge-info badge-pill">${que.getQuestionsCount()}</span>
@@ -45,6 +46,8 @@
     </div>
 
     </div>
+
+    <script src="../js/hideBottomNavbar.js"></script>
 
 </@c.page>
 

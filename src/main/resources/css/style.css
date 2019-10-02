@@ -1,40 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran|Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 
-h1.display-1{
-   color: #28aaa1;
+
+html {
+    min-height: 100%;
 }
 
-h5.header, th{
+body {
+    min-height: 100vh;
+}
+
+
+h1.display-1, h5.header,
+th, p, .card-body h5 label
+.breadcrumb, h1.display-4 p.lead{
     color: #28aaa1;
 }
 
-h5, td{
+#navlink, h5, td,
+h6.display-4.font-weight-normal.mx-auto,
+.lead, .mb-5 h4, .mb-5 h5{
     color: #096967;
-}
-
-#navlink{
-    color: #096967;
-}
-
-h6.display-4.font-weight-normal.mx-auto{
-    color: #096967;
-}
-
-p{
-    color: #28aaa1;
-}
-
-/*.centred{*/
-/*    margin: 30px 60px;*/
-/*}*/
-
-.card-body h5 label .breadcrumb{
-    color: #28aaa1;
-}
-
-h1.display-4 p.lead{
-    color: #28aaa1;
 }
 
 #queCard{
@@ -51,18 +37,6 @@ h1.display-4 p.lead{
     font-size: x-large;
 }
 
-.lead{
-    color: #096967;
-}
-
-.mb-5 h4{
-    color: #096967;
-}
-
-.mb-5 h5{
-    color: #096967;
-}
-
 .breadcrumb{
     font-family: 'Didact Gothic', 'Catamaran', sans-serif;
     color: #096967;
@@ -70,8 +44,19 @@ h1.display-4 p.lead{
 }
 
 .greeting{
-    margin-top: 150px;
+    margin-top: 125px;
+    margin-bottom: 150px;
     text-align:center;
+}
+
+.navbar {
+    background-color: #ecf0f6;
+    padding-bottom: 70px;
+}
+
+.developedBy p, .contacts p{
+    color: #096967;
+    font-size: small;
 }
 
 #loginForm{
@@ -144,11 +129,12 @@ select#queName#queDescription:focus {
     font-weight:100;
 }
 
-
 .kit{
     width: 200px;
     height: 200px;
 }
 
-
+.pageBody{
+    margin-bottom: 200px;
+}
 

@@ -26,4 +26,6 @@
             </#list>
         </#if>
     </div>
+
+    <script src="../js/hideBottomNavbar.js"></script>
 </@c.page>

@@ -13,7 +13,14 @@
 
         <div id="buttonBar" class="btn-group" role="group">
             <input type="button" class="btn btn-secondary" id="addQuestion"  value="+"/>
-            <input type="button" class="btn btn-secondary" id="prompt" value="?"/>
+            <input type="button" class="btn btn-secondary" id="prompt" value="?"
+                   data-toggle="popover"
+                   title="How to use it"
+                   data-content="You need to press button '+' to add new question.
+                    After adding write your question and choose type of answer.
+                    Free answer as text or choose variant. For deleting question you need to
+                    press button '-'. When you satisfied with you Que, you can press 'Create'.
+                    Good Luck!"/>
         </div>
 
         <div class="questions mb-3" id="questions"></div>
@@ -24,5 +31,6 @@
     </form>
 
     <script src="/js/newQue.js"></script>
+    <script src="../js/hideBottomNavbar.js"></script>
 
 </@c.page>
