@@ -27,6 +27,9 @@ public class Que {
     @OneToMany(mappedBy = "que", cascade = CascadeType.ALL)
     private List<Question> questionsList;
 
+//    @OneToOne
+//    private User user;
+
     public Que(){}
 
     public Que(String queName, String queDescription, Question... questionList) {
@@ -72,6 +75,10 @@ public class Que {
     public void setQuestionsList(List<Question> questionsList) {
         this.questionsList = questionsList;
     }
+
+//    public User getUser() { return user; }
+//
+//    public void setUser(User user) { this.user = user; }
 
     @Override
     public String toString() {

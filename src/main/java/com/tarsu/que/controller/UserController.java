@@ -1,7 +1,9 @@
 package com.tarsu.que.controller;
 
+import com.tarsu.que.domain.Que;
 import com.tarsu.que.domain.Role;
 import com.tarsu.que.domain.User;
+import com.tarsu.que.repos.QueRepo;
 import com.tarsu.que.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -17,6 +19,9 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private QueRepo queRepo;
 
     @GetMapping
     @PreAuthorize("hasAuthority('ADMIN')")
@@ -51,6 +56,7 @@ public class UserController {
     public String getProfile(Model model, @AuthenticationPrincipal User user){
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
+        //Que ques = queRepo.fi
         return "profile";
     }
 
