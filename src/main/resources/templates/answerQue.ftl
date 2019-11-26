@@ -4,6 +4,7 @@
 
 <@c.page>
 
+    <div id="alertPlaceholder"></div>
     <div class="jumbotron mx-auto"  style="width: 50rem; height: 15rem;">
         <p class="ml-5">
         <h1 class="display-4 text-left">${que.getQueName()}</h1>
@@ -50,5 +51,6 @@
 
     <script type="text/javascript" src="/js/answerQue.js"></script>
     <script src="../js/hideBottomNavbar.js"></script>
+
 </@c.page>
 

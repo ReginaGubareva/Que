@@ -30,7 +30,15 @@
             </#if>
         </ul>
 
-        <div class="navbar-text mr-3">${name}</div>
+        <div class="mt-3">
+            <button id="russian" value=true>True</button>
+            <button id="english" value=false>False</button>
+            <#assign isRussian = document.getElementById("russian").value/>
+        </div>
+
+
+
+        <div class="navbar-text ml-3 mr-3">${name}</div>
         <#if user??><@l.logout/></#if>
 
     </div>
