@@ -2,8 +2,10 @@ package com.tarsu.que.domain;
 
 import org.hibernate.validator.constraints.Length;
 
+import javax.jws.soap.SOAPBinding;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -25,16 +27,18 @@ public class Que {
     private String queDescription;
 
     @OneToMany(mappedBy = "que", cascade = CascadeType.ALL)
-    private List<Question> questionsList;
+    private List<Question> questionsList = new ArrayList<>();
 
-//    @OneToOne
-//    private User user;
+    @ManyToOne
+    @JoinColumn(name="user_id", referencedColumnName = "id")
+    private User usr;
 
     public Que(){}
 
-    public Que(String queName, String queDescription, Question... questionList) {
+    public Que(String queName, String queDescription, User user, Question... questionList) {
         this.queName = queName;
         this.queDescription = queDescription;
+        this.usr = user;
         this.questionsList = Stream.of(questionList).collect(Collectors.toList());
         this.questionsList.forEach(x->x.setQue(this));
     }
@@ -76,15 +80,16 @@ public class Que {
         this.questionsList = questionsList;
     }
 
-//    public User getUser() { return user; }
-//
-//    public void setUser(User user) { this.user = user; }
+    public User getUser() { return usr; }
+
+    public void setUser(User user) { this.usr = user; }
 
     @Override
     public String toString() {
         return "Que{" +
                 "queName='" + queName + '\'' +
                 ", queDescription='" + queDescription + '\'' +
+                ", user='" + usr + '\'' +
                 '}';
     }
 }

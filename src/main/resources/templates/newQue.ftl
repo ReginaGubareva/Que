@@ -1,11 +1,11 @@
+<#include "parts/security.ftl">
 <#import "parts/common.ftl" as c>
 
 <@c.page>
 
     <form action="/newQue" method="post" >
-
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
-
+        <input type="hidden" name="userId" value="${userId}" />
         <div>
             <input type="text" id="queName" name="queName" class="form-control mb-4" placeholder="Enter name of que" style="width: 50rem;">
             <input type="text" id="queDescription" name="queDescription" class="form-control mb-3" placeholder="Enter description" style="width: 50rem;">
@@ -31,6 +31,10 @@
     </form>
 
     <script src="/js/newQue.js"></script>
-    <script src="../js/hideBottomNavbar.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            document.getElementById("bottomNavbar").style.visibility = "hidden";
+        });
+    </script>
 
 </@c.page>

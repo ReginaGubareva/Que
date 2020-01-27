@@ -1,4 +1,4 @@
-<#macro page isRussian>
+<#macro page>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -7,6 +7,7 @@
 
         <title>Que</title>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../css/style.css" >
 
         <!-- Bootstrap CSS -->
@@ -40,18 +41,14 @@
         <div class=" d-flex justify-content-around">
             <img class="mt-2" style="width: 60px; height: 60px;" src="../../images/kit.png">
             <div class="developedBy ml-4 mt-3">
-
-                    <p>©<#if isRussian> Разработан Губаревой Р. Дизайн Губарев А. Логотип Еликова Ксения
-                        <#else> Developed by Gubareva R. Designed by Gubarev A. Logo of Yelikova K. </#if>
-                        <br>
-                        <a href="http://tarsu.kz/en/" style="color:#1BA0B6"><#if isRussian>ТарГУ 2019<#else>TarSU 2019</#if></a>
-                    </p>
-
-
+                <p>© Developed by Gubareva R. Designed by Gubarev A. Logo of Yelikova K.
+                    <br>
+                    <a href="http://tarsu.kz/en/" style="color:#1BA0B6">TarSU 2019</a>
+                </p>
             </div>
         </div>
         <div class="contacts">
-            <p><strong><#if isRussian>Контакты:<#else>Contacts:</#if></strong><br>
+            <p><strong>Contacts:</strong><br>
                 rengubareva@gmail.com
                 <br>
                 artem.gbrev@gmail.com

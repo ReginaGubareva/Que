@@ -16,8 +16,8 @@ public class Answer {
     @Length(max = 2048, message = "Too long(more than 2kB)")
     private String answer;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "question_id", referencedColumnName = "id")
     private Question question;
 
     public Answer(){}

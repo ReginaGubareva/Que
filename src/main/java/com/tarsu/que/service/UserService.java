@@ -136,5 +136,9 @@ public class UserService implements UserDetailsService {
         }
         userRepo.save(user);
     }
+
+    public void deleteUser(String userId){
+        userRepo.deleteById(Long.valueOf(userId));
+    }
 }
 

@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,12 +21,12 @@ public class Question {
     @Length(max = 2048, message = "Too long(more than 2kB)")
     private String question;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "que_id", referencedColumnName = "id")
     private Que que;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
-    private List<Answer> answersList;
+    private List<Answer> answersList = new ArrayList<>();
 
     public Question(){}
 
